@@ -1,0 +1,56 @@
+<ion-content>
+  <div id="progress" *ngIf="state" >
+    <ion-spinner mode="indeterminate"></ion-spinner>
+  </div>
+  
+  <div id="data_avail" *ngIf="data_avail" >
+    <ion-text>Data not available</ion-text>
+  </div>
+  
+  <div class="heading">
+    <header>
+      Mars Rover Photos
+    </header>
+  </div>
+  <div class="toggle">
+    <form style="padding: 10px; color: blanchedalmond">
+      <ion-item>
+        <ion-label>Rover</ion-label>
+        <ion-select [(ngModel)]="currentRover" [ngModelOptions]="{standalone: true}">
+          <ion-select-option [value]="j.key" *ngFor="let j of cameras | keyvalue">{{ j.key }}</ion-select-option>
+        </ion-select>
+      </ion-item>
+  
+    </form>
+  
+    <form style="padding: 10px; color: blanchedalmond">
+      <ion-item>
+        <ion-label>Camera</ion-label>
+        <ion-select [(ngModel)]="currentCamera" [ngModelOptions]="{standalone: true}">
+          <ion-select-option [value]="c.value" *ngFor="let c of cameras[currentRover] | keyvalue" >{{ c.value }}</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </form>
+  
+    <form style="padding: 10px; color: white">
+      <ion-item>
+        <ion-label>Sol</ion-label>
+        <input type="number" [(ngModel)]="sol" [ngModelOptions]="{standalone: true}">
+      </ion-item>
+  
+    </form>
+  </div>
+  
+  <div class="send">
+    <ion-button (click)="getPhotos()"><p style="color: white; margin-bottom: 0%; margin-top: 0%;">Apply</p></ion-button>
+  </div>
+  
+  <div class="photos" *ngIf="!state">
+    <ion-card *ngFor="let p of photos">
+      <img src="{{ p['img_src'] }}" (click)="showFullImage(p)" title="Click for see full size image"/>
+      <ion-card-content> <b>Date:</b> {{ p['earth_date'] }}</ion-card-content>
+      <ion-card-content> <b>Camera:</b> {{ p['camera']['full_name'] }}</ion-card-content>
+    </ion-card>
+  </div>
+  
+</ion-content>

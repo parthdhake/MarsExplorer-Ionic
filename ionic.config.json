@@ -1,0 +1,8 @@
+{
+  "name": "marsexplorer",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "41759430"
+}
