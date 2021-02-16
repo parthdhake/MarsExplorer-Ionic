@@ -19,8 +19,4 @@ public class MainActivity extends BridgeActivity {
     }});
   }
 
-  @Override
-  public void onBackPressed() {
-    super.onBackPressed();
-  }
 }

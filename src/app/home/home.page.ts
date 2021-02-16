@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Platform } from '@ionic/angular';
+import { AfterViewInit } from '@angular/core'
 
 @Component({
   selector: 'app-home',
@@ -7,6 +9,6 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
-
+  constructor(){}
+  
 }
