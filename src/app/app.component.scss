@@ -49,7 +49,6 @@ mat-label {
   outline-color: green;
 }
 
-
 * {
   box-sizing: border-box;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -70,4 +69,15 @@ ion-card.md.hydrated {
 
 .alert-wrapper.ion-overlay-wrapper.sc-ion-alert-md {
   background-color: #121212;
+}
+
+input.ng-valid.ng-dirty.ng-touched {
+  background: #333333;
+}
+ion-text.md.hydrated {
+  color: white;
+}
+ion-spinner {
+  animation-duration: 1400ms;
+  color: white;
 }
