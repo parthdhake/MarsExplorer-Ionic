@@ -1,58 +1,73 @@
-.heading{
-    text-align: center;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: xx-large;
-    background-color: #1e1e1e;
-    color: rosybrown;
+.heading {
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: xx-large;
+  background-color: #1e1e1e;
+  color: rosybrown;
 }
 
 #progress {
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
-
 
 #data_avail {
-    position: fixed;
-    font-size: x-large;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+  position: fixed;
+  font-size: x-large;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
-
 
 .send {
-    text-align: center;
+  text-align: center;
 }
 .toggle {
-    text-align: center;
-    color: blanchedalmond;
+  text-align: center;
+  --ion-text-color: blanchedalmond;
 }
 
 .photos {
-    width: 80%;
-    margin: 0 auto;
-    text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+mat-card {
+  width: 75%;
+  margin: 25px;
+  display: inline-block;
+}
+
+mat-label {
+  color: blanchedalmond;
+  outline-color: green;
 }
 
 
-
-mat-card{
-    width: 75%;
-    margin: 25px;
-    display: inline-block;
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  --ion-background-color: #333333;
+}
+input.ng-untouched.ng-pristine.ng-valid {
+  background-color: #333333;
 }
 
-mat-label{
-    color: blanchedalmond;
-    outline-color: green;
+ion-item::part(native) {
+  background-color: #1e1e1e;
 }
 
-span.mat-select-min-line.ng-tns-c77-1.ng-star-inserted {
-    color: turquoise;
+ion-card.md.hydrated {
+  background-color: #1e1e1e;
+}
+
+.alert-wrapper.ion-overlay-wrapper.sc-ion-alert-md {
+  background-color: #121212;
 }
